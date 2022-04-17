@@ -1,8 +1,8 @@
 //
 //  Persistence.swift
-//  Water Usage Log
+//  Shared
 //
-//  Created by William Santoso on 17/04/22.
+//  Created by Ruangguru on 19/12/21.
 //
 
 import CoreData
@@ -31,11 +31,10 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Water_Usage_Log")
+        container = NSPersistentContainer(name: "ExpenseTracker")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
-        container.viewContext.automaticallyMergesChangesFromParent = true
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

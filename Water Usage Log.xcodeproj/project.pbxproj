@@ -7,15 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01227FA280BD987002D1E1E /* YearMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01227F9280BD987002D1E1E /* YearMonth.swift */; };
+		E01227FC280BDA1B002D1E1E /* GlobalDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01227FB280BDA1B002D1E1E /* GlobalDataViewModel.swift */; };
+		E01227FF280BDB54002D1E1E /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01227FE280BDB54002D1E1E /* TextField.swift */; };
+		E0122801280BDC37002D1E1E /* AddLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0122800280BDC37002D1E1E /* AddLogViewModel.swift */; };
+		E0122803280BDC81002D1E1E /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0122802280BDC81002D1E1E /* ViewModifier.swift */; };
+		E0122806280BDDC8002D1E1E /* DailyLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0122805280BDDC8002D1E1E /* DailyLogModel.swift */; };
+		E0122808280BE03B002D1E1E /* YearMonthCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0122807280BE03B002D1E1E /* YearMonthCheck.swift */; };
+		E012280A280BE356002D1E1E /* DailyLogProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0122809280BE356002D1E1E /* DailyLogProperty.swift */; };
 		E0F849AD280BD7C6002411B7 /* Water_Usage_LogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849AC280BD7C6002411B7 /* Water_Usage_LogApp.swift */; };
-		E0F849AF280BD7C6002411B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849AE280BD7C6002411B7 /* ContentView.swift */; };
 		E0F849B1280BD7C7002411B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F849B0280BD7C7002411B7 /* Assets.xcassets */; };
 		E0F849B4280BD7C7002411B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F849B3280BD7C7002411B7 /* Preview Assets.xcassets */; };
-		E0F849B6280BD7C7002411B7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849B5280BD7C7002411B7 /* Persistence.swift */; };
 		E0F849B9280BD7C7002411B7 /* Water_Usage_Log.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0F849B7280BD7C7002411B7 /* Water_Usage_Log.xcdatamodeld */; };
 		E0F849C3280BD7C7002411B7 /* Water_Usage_LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849C2280BD7C7002411B7 /* Water_Usage_LogTests.swift */; };
 		E0F849CD280BD7C7002411B7 /* Water_Usage_LogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849CC280BD7C7002411B7 /* Water_Usage_LogUITests.swift */; };
 		E0F849CF280BD7C7002411B7 /* Water_Usage_LogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849CE280BD7C7002411B7 /* Water_Usage_LogUITestsLaunchTests.swift */; };
+		E0F849DC280BD7E5002411B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849DB280BD7E5002411B7 /* HomeView.swift */; };
+		E0F849EB280BD839002411B7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E0280BD839002411B7 /* Persistence.swift */; };
+		E0F849EC280BD839002411B7 /* DeleteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E2280BD839002411B7 /* DeleteEndpoint.swift */; };
+		E0F849ED280BD839002411B7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E3280BD839002411B7 /* Networking.swift */; };
+		E0F849EE280BD839002411B7 /* PostEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E4280BD839002411B7 /* PostEndpoint.swift */; };
+		E0F849EF280BD839002411B7 /* UpdateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E5280BD839002411B7 /* UpdateEndpoint.swift */; };
+		E0F849F0280BD839002411B7 /* GetEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E6280BD839002411B7 /* GetEndpoint.swift */; };
+		E0F849F1280BD839002411B7 /* HideKeyboardAppWide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E7280BD839002411B7 /* HideKeyboardAppWide.swift */; };
+		E0F849F2280BD839002411B7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E8280BD839002411B7 /* Extension.swift */; };
+		E0F849F3280BD839002411B7 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849E9280BD839002411B7 /* Validation.swift */; };
+		E0F849F4280BD839002411B7 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849EA280BD839002411B7 /* Mapper.swift */; };
+		E0F84A11280BD858002411B7 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F849FB280BD858002411B7 /* ErrorMessage.swift */; };
+		E0F84A15280BD858002411B7 /* YearMonthProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A00280BD858002411B7 /* YearMonthProperty.swift */; };
+		E0F84A18280BD858002411B7 /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A03280BD858002411B7 /* DefaultResponse.swift */; };
+		E0F84A1A280BD858002411B7 /* DateProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A06280BD858002411B7 /* DateProperty.swift */; };
+		E0F84A1B280BD858002411B7 /* SelectProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A07280BD858002411B7 /* SelectProperty.swift */; };
+		E0F84A1C280BD858002411B7 /* RoolupProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A08280BD858002411B7 /* RoolupProperty.swift */; };
+		E0F84A1D280BD858002411B7 /* NumberProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A09280BD858002411B7 /* NumberProperty.swift */; };
+		E0F84A1E280BD858002411B7 /* RelationProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A0A280BD858002411B7 /* RelationProperty.swift */; };
+		E0F84A1F280BD858002411B7 /* CheckmarkProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A0B280BD858002411B7 /* CheckmarkProperty.swift */; };
+		E0F84A20280BD858002411B7 /* FormulaProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A0C280BD858002411B7 /* FormulaProperty.swift */; };
+		E0F84A21280BD858002411B7 /* TextProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F84A0D280BD858002411B7 /* TextProperty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +64,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E01227F9280BD987002D1E1E /* YearMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearMonth.swift; sourceTree = "<group>"; };
+		E01227FB280BDA1B002D1E1E /* GlobalDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDataViewModel.swift; sourceTree = "<group>"; };
+		E01227FE280BDB54002D1E1E /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		E0122800280BDC37002D1E1E /* AddLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogViewModel.swift; sourceTree = "<group>"; };
+		E0122802280BDC81002D1E1E /* ViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		E0122805280BDDC8002D1E1E /* DailyLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogModel.swift; sourceTree = "<group>"; };
+		E0122807280BE03B002D1E1E /* YearMonthCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearMonthCheck.swift; sourceTree = "<group>"; };
+		E0122809280BE356002D1E1E /* DailyLogProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogProperty.swift; sourceTree = "<group>"; };
 		E0F849A9280BD7C6002411B7 /* Water Usage Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Usage Log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F849AC280BD7C6002411B7 /* Water_Usage_LogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_Usage_LogApp.swift; sourceTree = "<group>"; };
-		E0F849AE280BD7C6002411B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E0F849B0280BD7C7002411B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0F849B3280BD7C7002411B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E0F849B5280BD7C7002411B7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E0F849B8280BD7C7002411B7 /* Water_Usage_Log.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Water_Usage_Log.xcdatamodel; sourceTree = "<group>"; };
 		E0F849BE280BD7C7002411B7 /* Water Usage LogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water Usage LogTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F849C2280BD7C7002411B7 /* Water_Usage_LogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_Usage_LogTests.swift; sourceTree = "<group>"; };
 		E0F849C8280BD7C7002411B7 /* Water Usage LogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water Usage LogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F849CC280BD7C7002411B7 /* Water_Usage_LogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_Usage_LogUITests.swift; sourceTree = "<group>"; };
 		E0F849CE280BD7C7002411B7 /* Water_Usage_LogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_Usage_LogUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E0F849DB280BD7E5002411B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E0F849E0280BD839002411B7 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		E0F849E2280BD839002411B7 /* DeleteEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteEndpoint.swift; sourceTree = "<group>"; };
+		E0F849E3280BD839002411B7 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		E0F849E4280BD839002411B7 /* PostEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEndpoint.swift; sourceTree = "<group>"; };
+		E0F849E5280BD839002411B7 /* UpdateEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateEndpoint.swift; sourceTree = "<group>"; };
+		E0F849E6280BD839002411B7 /* GetEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetEndpoint.swift; sourceTree = "<group>"; };
+		E0F849E7280BD839002411B7 /* HideKeyboardAppWide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideKeyboardAppWide.swift; sourceTree = "<group>"; };
+		E0F849E8280BD839002411B7 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E0F849E9280BD839002411B7 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		E0F849EA280BD839002411B7 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		E0F849FB280BD858002411B7 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		E0F84A00280BD858002411B7 /* YearMonthProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearMonthProperty.swift; sourceTree = "<group>"; };
+		E0F84A03280BD858002411B7 /* DefaultResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultResponse.swift; sourceTree = "<group>"; };
+		E0F84A06280BD858002411B7 /* DateProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateProperty.swift; sourceTree = "<group>"; };
+		E0F84A07280BD858002411B7 /* SelectProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProperty.swift; sourceTree = "<group>"; };
+		E0F84A08280BD858002411B7 /* RoolupProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoolupProperty.swift; sourceTree = "<group>"; };
+		E0F84A09280BD858002411B7 /* NumberProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberProperty.swift; sourceTree = "<group>"; };
+		E0F84A0A280BD858002411B7 /* RelationProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationProperty.swift; sourceTree = "<group>"; };
+		E0F84A0B280BD858002411B7 /* CheckmarkProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckmarkProperty.swift; sourceTree = "<group>"; };
+		E0F84A0C280BD858002411B7 /* FormulaProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaProperty.swift; sourceTree = "<group>"; };
+		E0F84A0D280BD858002411B7 /* TextProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextProperty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E01227FD280BDB40002D1E1E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E01227FE280BDB54002D1E1E /* TextField.swift */,
+				E0122802280BDC81002D1E1E /* ViewModifier.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		E0F849A0280BD7C6002411B7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				E0F849AC280BD7C6002411B7 /* Water_Usage_LogApp.swift */,
-				E0F849AE280BD7C6002411B7 /* ContentView.swift */,
+				E0F849DF280BD839002411B7 /* Resource */,
+				E0F849F6280BD858002411B7 /* Model */,
+				E0F84A22280BD898002411B7 /* ViewModel */,
+				E0F849F5280BD841002411B7 /* View */,
 				E0F849B0280BD7C7002411B7 /* Assets.xcassets */,
-				E0F849B5280BD7C7002411B7 /* Persistence.swift */,
 				E0F849B7280BD7C7002411B7 /* Water_Usage_Log.xcdatamodeld */,
 				E0F849B2280BD7C7002411B7 /* Preview Content */,
 			);
@@ -131,6 +198,95 @@
 				E0F849CE280BD7C7002411B7 /* Water_Usage_LogUITestsLaunchTests.swift */,
 			);
 			path = "Water Usage LogUITests";
+			sourceTree = "<group>";
+		};
+		E0F849DF280BD839002411B7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E0F849E0280BD839002411B7 /* Persistence.swift */,
+				E0F849E1280BD839002411B7 /* Networking */,
+				E0F849E7280BD839002411B7 /* HideKeyboardAppWide.swift */,
+				E0F849E8280BD839002411B7 /* Extension.swift */,
+				E0F849E9280BD839002411B7 /* Validation.swift */,
+				E0F849EA280BD839002411B7 /* Mapper.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E0F849E1280BD839002411B7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E0F849E3280BD839002411B7 /* Networking.swift */,
+				E0F849E4280BD839002411B7 /* PostEndpoint.swift */,
+				E0F849E6280BD839002411B7 /* GetEndpoint.swift */,
+				E0F849E5280BD839002411B7 /* UpdateEndpoint.swift */,
+				E0F849E2280BD839002411B7 /* DeleteEndpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E0F849F5280BD841002411B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E01227FD280BDB40002D1E1E /* Component */,
+				E0F849DB280BD7E5002411B7 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0F849F6280BD858002411B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0F849F7280BD858002411B7 /* Local */,
+				E0F849FE280BD858002411B7 /* Remote */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E0F849F7280BD858002411B7 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E01227F9280BD987002D1E1E /* YearMonth.swift */,
+				E0122805280BDDC8002D1E1E /* DailyLogModel.swift */,
+				E0F849FB280BD858002411B7 /* ErrorMessage.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E0F849FE280BD858002411B7 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				E0F84A00280BD858002411B7 /* YearMonthProperty.swift */,
+				E0122809280BE356002D1E1E /* DailyLogProperty.swift */,
+				E0F84A03280BD858002411B7 /* DefaultResponse.swift */,
+				E0F84A05280BD858002411B7 /* Properties */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		E0F84A05280BD858002411B7 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				E0F84A06280BD858002411B7 /* DateProperty.swift */,
+				E0F84A07280BD858002411B7 /* SelectProperty.swift */,
+				E0F84A08280BD858002411B7 /* RoolupProperty.swift */,
+				E0F84A09280BD858002411B7 /* NumberProperty.swift */,
+				E0F84A0A280BD858002411B7 /* RelationProperty.swift */,
+				E0F84A0B280BD858002411B7 /* CheckmarkProperty.swift */,
+				E0F84A0C280BD858002411B7 /* FormulaProperty.swift */,
+				E0F84A0D280BD858002411B7 /* TextProperty.swift */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		E0F84A22280BD898002411B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E01227FB280BDA1B002D1E1E /* GlobalDataViewModel.swift */,
+				E0122807280BE03B002D1E1E /* YearMonthCheck.swift */,
+				E0122800280BDC37002D1E1E /* AddLogViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +419,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0F84A1F280BD858002411B7 /* CheckmarkProperty.swift in Sources */,
+				E0F849EE280BD839002411B7 /* PostEndpoint.swift in Sources */,
+				E0F849EF280BD839002411B7 /* UpdateEndpoint.swift in Sources */,
+				E0F84A15280BD858002411B7 /* YearMonthProperty.swift in Sources */,
+				E0122803280BDC81002D1E1E /* ViewModifier.swift in Sources */,
 				E0F849B9280BD7C7002411B7 /* Water_Usage_Log.xcdatamodeld in Sources */,
-				E0F849B6280BD7C7002411B7 /* Persistence.swift in Sources */,
-				E0F849AF280BD7C6002411B7 /* ContentView.swift in Sources */,
+				E0122808280BE03B002D1E1E /* YearMonthCheck.swift in Sources */,
+				E0F849F0280BD839002411B7 /* GetEndpoint.swift in Sources */,
+				E0F84A1B280BD858002411B7 /* SelectProperty.swift in Sources */,
+				E0F84A1C280BD858002411B7 /* RoolupProperty.swift in Sources */,
+				E0F849F4280BD839002411B7 /* Mapper.swift in Sources */,
+				E012280A280BE356002D1E1E /* DailyLogProperty.swift in Sources */,
+				E0F849EC280BD839002411B7 /* DeleteEndpoint.swift in Sources */,
+				E0F849F1280BD839002411B7 /* HideKeyboardAppWide.swift in Sources */,
+				E0122801280BDC37002D1E1E /* AddLogViewModel.swift in Sources */,
+				E0F84A1D280BD858002411B7 /* NumberProperty.swift in Sources */,
+				E0F84A18280BD858002411B7 /* DefaultResponse.swift in Sources */,
+				E0F84A1A280BD858002411B7 /* DateProperty.swift in Sources */,
+				E01227FA280BD987002D1E1E /* YearMonth.swift in Sources */,
+				E01227FF280BDB54002D1E1E /* TextField.swift in Sources */,
+				E0F84A1E280BD858002411B7 /* RelationProperty.swift in Sources */,
+				E0F849F3280BD839002411B7 /* Validation.swift in Sources */,
+				E0F849ED280BD839002411B7 /* Networking.swift in Sources */,
+				E0F84A21280BD858002411B7 /* TextProperty.swift in Sources */,
+				E0F84A20280BD858002411B7 /* FormulaProperty.swift in Sources */,
+				E0F849F2280BD839002411B7 /* Extension.swift in Sources */,
+				E0F849EB280BD839002411B7 /* Persistence.swift in Sources */,
+				E0F849DC280BD7E5002411B7 /* HomeView.swift in Sources */,
+				E01227FC280BDA1B002D1E1E /* GlobalDataViewModel.swift in Sources */,
+				E0F84A11280BD858002411B7 /* ErrorMessage.swift in Sources */,
+				E0122806280BDDC8002D1E1E /* DailyLogModel.swift in Sources */,
 				E0F849AD280BD7C6002411B7 /* Water_Usage_LogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +619,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +649,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
