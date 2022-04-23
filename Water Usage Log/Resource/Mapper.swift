@@ -54,7 +54,8 @@ struct Mapper {
             date: remote.date?.date.start.toDate(),
             value: remote.value?.number,
             usage: remote.usage?.number,
-            days: remote.days?.number
+            days: remote.days?.number,
+            usagePerDay: Double(remote.usagePerDay?.formula.string ?? "0") ?? 0
         )
     }
     
@@ -71,7 +72,8 @@ struct Mapper {
             value: NumberProperty(number: local.value ?? 0),
             date: DateProperty(date: DateModel(start: local.date?.toString() ?? "")),
             usage: NumberProperty(number: local.usage ?? 0),
-            days: NumberProperty(number: local.days ?? 0)
+            days: NumberProperty(number: local.days ?? 0),
+            usagePerDay: nil
         )
     }
     

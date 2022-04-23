@@ -16,4 +16,5 @@ struct DailyLogModel {
     var value: Double?
     var usage: Double?
     var days: Double?
+    var usagePerDay: Double?
 }

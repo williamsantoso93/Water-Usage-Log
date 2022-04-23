@@ -15,6 +15,7 @@ struct DailyLogProperty: Codable {
     let date: DateProperty?
     let usage: NumberProperty?
     let days: NumberProperty?
+    let usagePerDay: FormulaProperty?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -23,5 +24,6 @@ struct DailyLogProperty: Codable {
         case date = "Date"
         case usage = "Usage"
         case days = "Days"
+        case usagePerDay = "Usage Per day"
     }
 }

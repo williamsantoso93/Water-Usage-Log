@@ -14,15 +14,36 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             Form {
-                NumberTextFiedForm(title: "Input Log", prompt: "0.6", value: $viewModel.valueString)
-                DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
+                Section {
+                    NumberTextFiedForm(title: "Input Log", prompt: "0.6", value: $viewModel.valueString)
+                    DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
+                } header: {
+                    Text("Input")
+                }
+                
+                Section {
+                    VStack(alignment: .leading) {
+                        Text("Date : \((viewModel.latestDailyLog.date ?? Date()).toString())")
+                        Text("value : \((viewModel.latestDailyLog.value ?? 0).splitDigit())")
+                        Text("usage : \((viewModel.latestDailyLog.usage ?? 0).splitDigit())")
+                        Text("days : \((viewModel.latestDailyLog.days ?? 0).splitDigit())")
+                        Text("usagePerDay : \((viewModel.latestDailyLog.usagePerDay ?? 0).splitDigit())")
+                    }
+                } header: {
+                    Text("Latest Dialy Log")
+                }
+            }
+            .refreshable {
+                viewModel.fetchLatest()
             }
             .navigationTitle("PAM Log")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         viewModel.saveLog { isSuccess in
-                            
+                            if isSuccess {
+                                viewModel.fetchLatest()
+                            }
                         }
                     }
                 }

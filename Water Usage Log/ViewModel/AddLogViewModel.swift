@@ -18,6 +18,38 @@ class AddLogViewModel: ObservableObject {
     @Published var errorMessage: ErrorMessage = ErrorMessage(title: "", message: "")
     @Published var isShowErrorMessage = false
     
+    @Published var latestDailyLog = DailyLogModel(blockID: "")
+    
+    init() {
+        fetchLatest()
+    }
+    
+    func fetchLatest() {
+        isLoading = true
+        getLatestDailyLog { _ in
+            self.isLoading = false
+        }
+    }
+    
+    func getLatestDailyLog(completion: @escaping (DailyLogModel) -> Void) {
+        Networking.shared.getLatestDailyLog { (result: Result<DefaultResponse<DailyLogProperty>, NetworkError>) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data) :
+                    if let result = data.results.first {
+                        let latestDailyLog = Mapper.dailyLogRemoteToLocal(result.id, result.properties)
+                        self.latestDailyLog = latestDailyLog
+                        
+                        return completion(latestDailyLog)
+                    }
+                case .failure(let error) :
+                    self.isLoading = false
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
     func saveLog(completion: @escaping (_ isSuccess: Bool) -> Void) {
         do {
             var dailyLog = DailyLogModel(blockID: "")
@@ -29,29 +61,17 @@ class AddLogViewModel: ObservableObject {
                 
                 self.isLoading = true
                 
-                Networking.shared.getLatestDailyLog { (result: Result<DefaultResponse<DailyLogProperty>, NetworkError>) in
-                    DispatchQueue.main.async {
-                        switch result {
-                        case .success(let data) :
-                            if let result = data.results.first {
-                                let lastDailyLog = Mapper.dailyLogRemoteToLocal(result.id, result.properties)
-                                
-                                if let days = lastDailyLog.date?.daysBetween(end: self.date) {
-                                    dailyLog.days = Double(days)
-                                }
-                                if let lastValue = lastDailyLog.value {
-                                    dailyLog.usage = self.value - lastValue
-                                }
-                            }
-                            
-                            Networking.shared.postDailyLog(dailyLog) { isSuccess in
-                                self.isLoading = false
-                                return completion(isSuccess)
-                            }
-                        case .failure(let error) :
-                            self.isLoading = false
-                            print(error.localizedDescription)
-                        }
+                self.getLatestDailyLog { latestDailyLog in
+                    if let days = latestDailyLog.date?.daysBetween(end: self.date) {
+                        dailyLog.days = Double(days)
+                    }
+                    if let lastValue = latestDailyLog.value {
+                        dailyLog.usage = self.value - lastValue
+                    }
+                    
+                    Networking.shared.postDailyLog(dailyLog) { isSuccess in
+                        self.isLoading = false
+                        return completion(isSuccess)
                     }
                 }
             }
