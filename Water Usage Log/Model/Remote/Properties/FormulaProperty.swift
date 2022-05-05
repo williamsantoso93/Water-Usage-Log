@@ -14,6 +14,7 @@ struct FormulaProperty: Codable {
 
 // MARK: - FormulaString
 struct Formula: Codable {
-    var string: String?
-    var boolean: Bool?
+    var number: Double? = nil
+    var string: String? = nil
+    var boolean: Bool? = nil
 }

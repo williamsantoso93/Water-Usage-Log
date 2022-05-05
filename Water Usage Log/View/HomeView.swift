@@ -16,14 +16,13 @@ struct HomeView: View {
             Form {
                 Section {
                     NumberTextFiedForm(title: "Input Log", prompt: "0.6", value: $viewModel.valueString)
-                    DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
                 } header: {
                     Text("Input")
                 }
                 
                 Section {
                     VStack(alignment: .leading) {
-                        Text("Date : \((viewModel.latestDailyLog.date ?? Date()).toString())")
+                        Text("Date : \((viewModel.latestDailyLog.createdTime ?? Date()).toString())")
                         Text("value : \((viewModel.latestDailyLog.value ?? 0).splitDigit())")
                         Text("usage : \((viewModel.latestDailyLog.usage ?? 0).splitDigit())")
                         Text("days : \((viewModel.latestDailyLog.days ?? 0).splitDigit())")

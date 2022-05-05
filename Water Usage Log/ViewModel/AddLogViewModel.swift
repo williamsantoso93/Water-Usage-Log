@@ -37,7 +37,7 @@ class AddLogViewModel: ObservableObject {
                 switch result {
                 case .success(let data) :
                     if let result = data.results.first {
-                        let latestDailyLog = Mapper.dailyLogRemoteToLocal(result.id, result.properties)
+                        let latestDailyLog = Mapper.dailyLogRemoteToLocal(result.id, createdTime: result.createdTime, result.properties)
                         self.latestDailyLog = latestDailyLog
                         
                         return completion(latestDailyLog)
@@ -54,7 +54,7 @@ class AddLogViewModel: ObservableObject {
         do {
             var dailyLog = DailyLogModel(blockID: "")
             dailyLog.value = try Validation.numberTextField(valueString)
-            dailyLog.date = date
+            let date = Date()
             
             YearMonthCheck.shared.getYearMonthID(date) { id in
                 dailyLog.yearMonthID = id
@@ -62,7 +62,7 @@ class AddLogViewModel: ObservableObject {
                 self.isLoading = true
                 
                 self.getLatestDailyLog { latestDailyLog in
-                    if let days = latestDailyLog.date?.daysBetween(end: self.date) {
+                    if let days = latestDailyLog.createdTime?.daysBetween(end: date) {
                         dailyLog.days = Double(days)
                     }
                     if let lastValue = latestDailyLog.value {
@@ -71,6 +71,9 @@ class AddLogViewModel: ObservableObject {
                     
                     Networking.shared.postDailyLog(dailyLog) { isSuccess in
                         self.isLoading = false
+                        if isSuccess {
+                            self.valueString = ""
+                        }
                         return completion(isSuccess)
                     }
                 }

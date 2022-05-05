@@ -41,21 +41,21 @@ struct Mapper {
     //MARK: - DailyLog
     static func mapDailyLogListRemoteToLocal(_ remote: [ResultProperty<DailyLogProperty>]) -> [DailyLogModel] {
         remote.map { result in
-            dailyLogRemoteToLocal(result.id, result.properties)
+            dailyLogRemoteToLocal(result.id, createdTime: result.createdTime, result.properties)
         }
     }
     
-    static func dailyLogRemoteToLocal(_ id: String, _ remote: DailyLogProperty) -> DailyLogModel {
+    static func dailyLogRemoteToLocal(_ id: String, createdTime: String, _ remote: DailyLogProperty) -> DailyLogModel {
         DailyLogModel(
             blockID: id,
             id: remote.id?.title.first?.text.content ?? "",
             yearMonth: nil,
             yearMonthID: remote.yearMonth?.relation.first?.id,
-            date: remote.date?.date.start.toDate(),
+            createdTime: createdTime.toDate(),
             value: remote.value?.number,
             usage: remote.usage?.number,
             days: remote.days?.number,
-            usagePerDay: Double(remote.usagePerDay?.formula.string ?? "0") ?? 0
+            usagePerDay: remote.usagePerDay?.formula.number ?? 0
         )
     }
     
@@ -70,7 +70,6 @@ struct Mapper {
             id: TitleProperty(title: [Title(text: TextContent(content: local.id))]),
             yearMonth: RelationProperty(relation: [Relation(id: local.yearMonthID ?? "")]),
             value: NumberProperty(number: local.value ?? 0),
-            date: DateProperty(date: DateModel(start: local.date?.toString() ?? "")),
             usage: NumberProperty(number: local.usage ?? 0),
             days: NumberProperty(number: local.days ?? 0),
             usagePerDay: nil

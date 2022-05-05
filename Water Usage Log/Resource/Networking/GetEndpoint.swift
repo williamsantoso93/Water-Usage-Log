@@ -49,7 +49,6 @@ extension Networking {
             startCursor: startCursor,
             pageSize: 1,
             sorts: [
-                Sort(property: "Date", direction: SortDirection.descending.rawValue),
                 Sort(property: "Created Time", direction: SortDirection.descending.rawValue),
             ]
         )

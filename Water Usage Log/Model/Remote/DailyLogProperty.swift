@@ -12,7 +12,6 @@ struct DailyLogProperty: Codable {
     let id: TitleProperty?
     let yearMonth: RelationProperty?
     let value: NumberProperty?
-    let date: DateProperty?
     let usage: NumberProperty?
     let days: NumberProperty?
     let usagePerDay: FormulaProperty?
@@ -21,7 +20,6 @@ struct DailyLogProperty: Codable {
         case id
         case yearMonth = "Year/Month"
         case value = "Value"
-        case date = "Date"
         case usage = "Usage"
         case days = "Days"
         case usagePerDay = "Usage Per day"
