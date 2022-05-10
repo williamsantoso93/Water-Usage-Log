@@ -51,7 +51,7 @@ struct Mapper {
             id: remote.id?.title.first?.text.content ?? "",
             yearMonth: nil,
             yearMonthID: remote.yearMonth?.relation.first?.id,
-            createdTime: createdTime.toDateIS08601(),
+            createdDate: remote.createdDate?.date.start.toDateIS08601(),
             value: remote.value?.number,
             previousDate: remote.previousDate?.date.start.toDateIS08601(),
             previousvalue: remote.previousvalue?.number,
@@ -71,6 +71,7 @@ struct Mapper {
         DailyLogProperty(
             id: TitleProperty(title: [Title(text: TextContent(content: local.id))]),
             yearMonth: RelationProperty(relation: [Relation(id: local.yearMonthID ?? "")]),
+            createdDate: DateProperty(date: DateModel(start: local.createdDate?.toStringIS08601() ?? "")),
             value: NumberProperty(number: local.value ?? 0),
             previousDate: DateProperty(date: DateModel(start: local.previousDate?.toStringIS08601() ?? "")),
             previousvalue: NumberProperty(number: local.previousvalue ?? 0),

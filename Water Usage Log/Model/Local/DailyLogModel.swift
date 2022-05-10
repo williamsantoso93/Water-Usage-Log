@@ -12,7 +12,7 @@ struct DailyLogModel {
     var id: String = UUID().uuidString
     var yearMonth: String?
     var yearMonthID: String? = nil
-    var createdTime: Date?
+    var createdDate: Date?
     var value: Double?
     var previousDate: Date?
     var previousvalue: Double?

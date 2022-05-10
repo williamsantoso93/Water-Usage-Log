@@ -22,7 +22,7 @@ struct HomeView: View {
                 
                 Section {
                     VStack(alignment: .leading) {
-                        Text("Date : \((viewModel.latestDailyLog.createdTime ?? Date()).toString(format: "yyyy-MM-dd hh:mm"))")
+                        Text("Date : \((viewModel.latestDailyLog.createdDate ?? Date()).toString(format: "yyyy-MM-dd hh:mm"))")
                         Text("value : \((viewModel.latestDailyLog.value ?? 0).splitDigit())")
                         Text("usage : \((viewModel.latestDailyLog.usage ?? 0).splitDigit())")
                         Text("days : \((viewModel.latestDailyLog.days ?? 0).splitDigit())")

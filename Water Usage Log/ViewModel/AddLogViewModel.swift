@@ -54,8 +54,6 @@ class AddLogViewModel: ObservableObject {
         do {
             var dailyLog = DailyLogModel(blockID: "")
             dailyLog.value = try Validation.numberTextField(valueString)
-            dailyLog.previousDate = latestDailyLog.createdTime
-            dailyLog.previousvalue = latestDailyLog.value
             let date = Date()
             
             YearMonthCheck.shared.getYearMonthID(date) { id in
@@ -64,12 +62,9 @@ class AddLogViewModel: ObservableObject {
                 self.isLoading = true
                 
                 self.getLatestDailyLog { latestDailyLog in
-                    if let days = latestDailyLog.createdTime?.daysBetween(end: date) {
-                        dailyLog.days = Double(days)
-                    }
-                    if let lastValue = latestDailyLog.value {
-                        dailyLog.usage = self.value - lastValue
-                    }
+                    dailyLog.createdDate = Date()
+                    dailyLog.previousDate = latestDailyLog.createdDate
+                    dailyLog.previousvalue = latestDailyLog.value
                     
                     Networking.shared.postDailyLog(dailyLog) { isSuccess in
                         self.isLoading = false

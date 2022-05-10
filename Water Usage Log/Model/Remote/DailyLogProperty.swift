@@ -11,6 +11,7 @@ import Foundation
 struct DailyLogProperty: Codable {
     let id: TitleProperty?
     let yearMonth: RelationProperty?
+    let createdDate: DateProperty?
     let value: NumberProperty?
     let previousDate: DateProperty?
     let previousvalue: NumberProperty?
@@ -21,6 +22,7 @@ struct DailyLogProperty: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case yearMonth = "Year/Month"
+        case createdDate = "Created Date"
         case value = "Value"
         case previousDate = "Previous Date"
         case previousvalue = "Previous Value"
