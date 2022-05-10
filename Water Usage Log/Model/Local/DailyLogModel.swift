@@ -14,6 +14,8 @@ struct DailyLogModel {
     var yearMonthID: String? = nil
     var createdTime: Date?
     var value: Double?
+    var previousDate: Date?
+    var previousvalue: Double?
     var usage: Double?
     var days: Double?
     var usagePerDay: Double?

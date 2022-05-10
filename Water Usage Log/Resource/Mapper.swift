@@ -51,11 +51,13 @@ struct Mapper {
             id: remote.id?.title.first?.text.content ?? "",
             yearMonth: nil,
             yearMonthID: remote.yearMonth?.relation.first?.id,
-            createdTime: createdTime.toDate(),
+            createdTime: createdTime.toDateIS08601(),
             value: remote.value?.number,
-            usage: remote.usage?.number,
-            days: remote.days?.number,
-            usagePerDay: remote.usagePerDay?.formula.number ?? 0
+            previousDate: remote.previousDate?.date.start.toDateIS08601(),
+            previousvalue: remote.previousvalue?.number,
+            usage: remote.usage?.formula.number,
+            days: remote.days?.formula.number,
+            usagePerDay: remote.usagePerDay?.formula.number
         )
     }
     
@@ -70,8 +72,10 @@ struct Mapper {
             id: TitleProperty(title: [Title(text: TextContent(content: local.id))]),
             yearMonth: RelationProperty(relation: [Relation(id: local.yearMonthID ?? "")]),
             value: NumberProperty(number: local.value ?? 0),
-            usage: NumberProperty(number: local.usage ?? 0),
-            days: NumberProperty(number: local.days ?? 0),
+            previousDate: DateProperty(date: DateModel(start: local.previousDate?.toStringIS08601() ?? "")),
+            previousvalue: NumberProperty(number: local.previousvalue ?? 0),
+            usage: nil,
+            days: nil,
             usagePerDay: nil
         )
     }

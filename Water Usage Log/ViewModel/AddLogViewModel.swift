@@ -54,6 +54,8 @@ class AddLogViewModel: ObservableObject {
         do {
             var dailyLog = DailyLogModel(blockID: "")
             dailyLog.value = try Validation.numberTextField(valueString)
+            dailyLog.previousDate = latestDailyLog.createdTime
+            dailyLog.previousvalue = latestDailyLog.value
             let date = Date()
             
             YearMonthCheck.shared.getYearMonthID(date) { id in

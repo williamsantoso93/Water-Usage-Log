@@ -22,14 +22,14 @@ struct HomeView: View {
                 
                 Section {
                     VStack(alignment: .leading) {
-                        Text("Date : \((viewModel.latestDailyLog.createdTime ?? Date()).toString())")
+                        Text("Date : \((viewModel.latestDailyLog.createdTime ?? Date()).toString(format: "yyyy-MM-dd hh:mm"))")
                         Text("value : \((viewModel.latestDailyLog.value ?? 0).splitDigit())")
                         Text("usage : \((viewModel.latestDailyLog.usage ?? 0).splitDigit())")
                         Text("days : \((viewModel.latestDailyLog.days ?? 0).splitDigit())")
                         Text("usagePerDay : \((viewModel.latestDailyLog.usagePerDay ?? 0).splitDigit())")
                     }
                 } header: {
-                    Text("Latest Dialy Log")
+                    Text("Previous Dialy Log")
                 }
             }
             .refreshable {

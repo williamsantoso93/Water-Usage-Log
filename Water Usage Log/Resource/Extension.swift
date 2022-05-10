@@ -96,6 +96,13 @@ extension String {
         
         return dateFormatter.date(from: self)
     }
+    
+    func toDateIS08601() -> Date? {
+        let dateFormatter = ISO8601DateFormatter()
+        
+        dateFormatter.formatOptions.insert(.withFractionalSeconds)
+        return dateFormatter.date(from: self)
+    }
 }
 
 extension Date {
@@ -104,6 +111,10 @@ extension Date {
         dateFormatter.dateFormat = format
         
         return dateFormatter.string(from: self)
+    }
+    
+    func toStringIS08601() -> String {
+        self.toString(format: "yyyy-MM-dd'T'HH:mm:ssZ")
     }
     
     func toYearMonthString() -> String {
